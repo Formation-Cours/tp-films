@@ -1,0 +1,21 @@
+meta {
+  name: Save
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "titre": "",
+    "genre": "Drame",
+    "annee": 1972,
+    "realisateur": "Francis Ford Coppola",
+    "description": "L'histoire de la montée et de la chute du clan Corleone, une famille mafieuse de New York."
+  }
+}
