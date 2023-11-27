@@ -1,6 +1,7 @@
 package com.formation.film.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.formation.film.dto.FilmDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -57,5 +58,16 @@ public class FilmEntity {
         this.annee = annee;
         this.realisateur = realisateur;
         this.description = description;
+    }
+
+    public FilmDTO convertEntityToDto() {
+        FilmDTO filmDTO = new FilmDTO();
+        filmDTO.setId(this.getId());
+        filmDTO.setTitre(this.getTitre());
+        filmDTO.setGenre(this.getGenre());
+        filmDTO.setAnnee(this.getAnnee());
+        filmDTO.setRealisateur(this.getRealisateur());
+        filmDTO.setDescription(this.getDescription());
+        return filmDTO;
     }
 }

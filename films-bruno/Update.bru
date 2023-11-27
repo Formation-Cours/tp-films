@@ -1,11 +1,11 @@
 meta {
-  name: Save
+  name: Update
   type: http
-  seq: 2
+  seq: 4
 }
 
-post {
-  url: {{base_url}}
+put {
+  url: {{base_url}}/21
   body: json
   auth: none
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "titre": "Le Parrain",
     "genre": "Drame",
-    "annee": 1921,
+    "annee": 1972,
     "realisateur": "Francis Ford Coppola",
     "description": "L'histoire de la montée et de la chute du clan Corleone, une famille mafieuse de New York."
   }

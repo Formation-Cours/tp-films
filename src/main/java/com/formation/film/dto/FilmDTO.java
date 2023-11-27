@@ -11,7 +11,6 @@ import lombok.Setter;
 
 @Data
 public class FilmDTO {
-    @Setter(AccessLevel.NONE)
     private Long id;
 
     @NotBlank(message = "Le titre ne doit pas être vide.")
