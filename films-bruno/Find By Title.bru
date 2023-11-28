@@ -4,8 +4,12 @@ meta {
   seq: 6
 }
 
-delete {
-  url: {{base_url}}/8
+get {
+  url: {{base_url}}/search?annee=1988
   body: none
   auth: none
+}
+
+query {
+  annee: 1988
 }
